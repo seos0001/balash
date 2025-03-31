@@ -3,16 +3,12 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
+import pumpkin from "../assets/images/pumpkin.webp";
 ---
 
 <MainLayout>
-  <section class="flex flex-col items-center justify-center h-screen text-center relative">
-    <div class="flex flex-col items-center">
-      <!-- Juster størrelsen på billedet her -->
-      <div class="mt-5">
-        <a href="/about" class="block text-lg text-black my-1">( about )</a>
-        <a href="/projects" class="block text-lg text-black my-1">( projekter )</a>
-      </div>
-    </div>
+  <section class="flex items-center justify-center h-screen text-center relative overflow-hidden">
+    <!-- Billede i baggrunden, tilpasset og centrering uden beskæring -->
+    <img src={pumpkin.src} alt="mig" class="absolute inset-0 w-full h-full object-contain" />
   </section>
 </MainLayout>
