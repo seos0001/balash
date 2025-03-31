@@ -4,29 +4,40 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 ---
-
 <MainLayout>
+  <section class="max-w-4xl mx-auto py-10">
+    <p class="text-lg text-black my-1 tracking-[0.02em] text-center mb-10">
+      <span class="italic">about:</span> EMIL DOS SANTOS, BERTRAM BLAUENFELDT OTKJÆR OG VINCENT GROOS.
+    </p>
 
-    <p class="text-[16px] tracking-[0.02em] text-center mb-10 mt-10">
-  <span class="italic">Hjertet er en fold med heste:</span> FORLAGET AMULET, ANNA RIEDER og SIDSEL ANA WELDEN. <br>
-  <span class="italic">BIDRAG FRA:</span> Birgit Bundesen, Gry Stokkendahl Dalgas og Fine Gråbøl.
-</p>
-
-
-      <div class="grid md:grid-cols-2 gap-12 mb-10">
-        <p class="leading-tight text-justify">
-          Hjertet er en fold med heste af Anna Rieder og Sidsel Ana Welden er en stærk og flerstemmig antologi, der med litterært nærvær og personlig indsigt tegner et råt og rørende portræt af psykiatrien i Danmark. Gennem bidrag fra patienter, pårørende og fagfolk foldes psykiatriens mange facetter ud – fra sårbarhed og omsorg til afmagt, modstand og håb om forandring. Med en blanding af essays, digte og personlige beretninger skaber bogen et rum for refleksion og vidnesbyrd, hvor stemmer, der ofte overses i den offentlige debat, får plads. Blandt bidragyderne er Birgit Bundesen, Fine Gråbøl, Jakob Jakobsen og Asta Olivia Nordenhof, der hver især bidrager med deres unikke perspektiver på psykiatriens realiteter og udfordringer.
-        </p>
-        <p class="leading-tight text-justify">
-          Forfatterne, der selv har erfaringer som psykiatribrugere, viderefører med denne bog deres arbejde for ømhedsaktivisme – en bevægelse, der insisterer på større forståelse, respekt og værdighed i behandlingen af psykisk sårbare. Med et skarpt blik for psykiatriens nuværende tilstand peger bogen både på systemets svigt og dets muligheder for forandring. Gennem de personlige fortællinger og litterære bidrag åbner Hjertet er en fold med heste en vigtig samtale om psykiatriens fremtid og behovet for en mere menneskelig tilgang til sårbarhed og behandling.
-        </p>
-      </div>
-
-      <p class="leading-tight text-justify">
-        Ved at købe Hjertet er en fold med heste støtter du en nødvendig samtale om psykiatri og psykisk
-        sårbarhed. Bogen kan købes hos din lokale boghandler eller
-        <a href="https://www.saxo.com/dk/hjertet-er-en-fold-med-heste_bog_9788797191040?srsltid=AfmBOopayR7kYackqLaHt8j-mKIRXSMR02xrdgIg960nrOj4Rmzs9AsA" class="font-bold underline">her</a>.
+    <div class="grid md:grid-cols-2 gap-12 mb-10">
+      <p class="text-lg text-black my-1 leading-relaxed text-left">
+        Balash was born from a spontaneous idea shared by three friends—Bertram, Emil, and Vincent—whose paths first crossed in the world of hospitality.
+        Emil, a chef driven by culinary creativity, crafts the flavors behind each experience. Bertram, a connoisseur of wine and impeccable service, ensures that every detail is seamlessly executed. Vincent, with expertise in event planning, brings their shared vision to life.
+        What began as a single pop-up at Pio Vin has since evolved into a full-fledged event company, dedicated to curating gastronomic experiences that feel both intimate and unforgettable.
       </p>
+      <p class="text-lg text-black my-1 leading-relaxed text-left">
+        What started as a single pop-up at Pio Vin has grown into a full-fledged event company, dedicated to crafting unforgettable gastronomic experiences.
+        Rooted in the Arabic word for "giving without expectation," <span class="font-semibold">Balash</span> embodies our philosophy of generosity. While not free, our dining experiences feel like gifts—thoughtfully curated, rich in seasonal ingredients, and infused with warmth, quality, and a touch of Balash.
+      </p>
+    </div>
+
+    <!-- Sektioner med opdateret styling -->
+    <div class="space-y-8 text-center">
+      <div>
+        <h3 class="text-lg text-black my-1">( PRIVATE EVENTS )</h3>
+        <hr class="border-t border-gray-300 mt-2" />
+      </div>
+      <div>
+        <h3 class="text-lg text-black my-1">( POP UP DINING )</h3>
+        <hr class="border-t border-gray-300 mt-2" />
+      </div>
+      <div>
+        <h3 class="text-lg text-black my-1">( CATERING )</h3>
+        <hr class="border-t border-gray-300 mt-2" />
+      </div>
     </div>
   </section>
 </MainLayout>
+
+
