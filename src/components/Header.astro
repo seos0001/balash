@@ -1,5 +1,16 @@
----
----
-<div>
-Header - tilføj navigation mm.
-</div>
+<div x-data="{ showmenu: false }" class="absolute top-5 w-full px-5 text-sm text-black z-50">
+<header class="flex justify-between items-center relative">
+<!-- Logo -->
+<a href="/" class="font-normal">Balash ( private events, pop-up dining, and catering. ) </a>
+
+<!-- Desktop Menu -->
+<nav id="desktopmenu" class="hidden lg:block">
+<ul class="flex flex-row gap-6 font-normal">
+<li><a href="/about" class="hover:text-[#1100FF] transition">about</a></li>
+<li><a href="/contact" class="hover:text-[#1100FF] transition">contact</a></li>
+<li><a href="/archive" class="hover:text-[#1100FF] transition">archive</a></li>
+</ul>
+</nav>
+
+
+
