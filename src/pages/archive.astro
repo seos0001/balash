@@ -29,7 +29,7 @@ import pumpkin from "../assets/images/pumpkin.webp";
       <h1 class="text-3xl font-thin">A taste of Balash: moments from our past events</h1>
     </div>
 
-        <!-- SEKTION 1 -->
+    <!-- SEKTION 1 -->
     <div class="max-w-3xl mx-auto pt-24 px-6 space-y-6">
       <!-- Første billede -->
       <div>
@@ -88,44 +88,39 @@ import pumpkin from "../assets/images/pumpkin.webp";
         </div>
       </div>
     </div>
+
+    <!-- SEKTION 3 -->
+<div class="pt-24 max-w-3xl mx-auto px-6 space-y-6">
+  <!-- Tekst og video -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
+    <!-- Tekst venstre -->
+    <div class="text-black pb-2">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore.
+      </p>
+    </div>
+
+    <!-- Video højre -->
+    <div>
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="w-full h-auto"
+      >
+        <source src="/videos/video02.MP4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </div>
 
-        <!-- SEKTION 3 -->
-      <div class="pt-24">
-        <!-- Video til venstre -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
-          <div>
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              class="w-full h-auto"
-            >
-              <source src="/videos/video01.MP4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          
-          <!-- Tekst nederst i højre kolonne -->
-          <div class="pb-2 text-black">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget ante mauris. Quisque et tortor a nunc tempor euismod. Nulla facilisi. Integer vehicula nisl eu justo maximus, nec placerat neque viverra. Donec sit amet sagittis libero. Mauris luctus nunc non suscipit fermentum. 
-            </p>
-          </div>
-        </div>
+  <!-- To billeder side om side -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-12">
+    <img src={ceviche01.src} alt="ceviche01" class="w-full h-auto object-cover" />
+    <img src={ceviche02.src} alt="ceviche02" class="w-full h-auto object-cover" />
+  </div>
+</div>
 
-        <!-- To billeder side om side -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-12">
-          <img src={bar.src} alt="bar" class="w-full h-auto object-cover" />
-          <img src={pumpkin.src} alt="pumpkin" class="w-full h-auto object-cover" />
-        </div>
-
-        <!-- Et stort billede -->
-        <div class="pt-12">
-          <img src={cheesecake.src} alt="cheesecake" class="w-full h-auto object-cover" />
-        </div>
-      </div>
-    </div>
   </div>
 </MainLayout>
