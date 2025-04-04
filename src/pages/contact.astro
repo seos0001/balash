@@ -6,17 +6,20 @@ import { Image } from 'astro:assets';
 ---
 
 <MainLayout>
-  <div class="flex flex-col justify-between h-screen p-80">
-    <div>
-      <p class="text-[36px]">For any questions or inquiries on private events please contact.</p>
+  <div class="flex flex-col justify-between h-screen p-20"> <!-- Justeret padding for bedre balance -->
+    <!-- Overskriften med ekstra spacing under -->
+    <div class="mb-12"> <!-- Margin bottom tilføjet -->
+      <p class="text-[36px] text-left">For any questions or inquiries on private events please contact.</p> <!-- Venstrestillet tekst -->
     </div>
-    <div class="flex justify-between text-sm">
-      <div>
+
+    <!-- Kontakt information -->
+    <div class="flex justify-between text-sm space-x-10"> <!-- Tilføjet space-x-10 for at give bedre afstand mellem de to kolonner -->
+      <div class="space-y-2"> <!-- Tilføjet space mellem kontaktpersoner -->
         <p>Emil Dos Santos / chef and service</p>
         <p>Bertram Blauenfeldt Otkjær / wine and service</p>
         <p>Vincent Groos / finance and service</p>
       </div>
-      <div class="text-right">
+      <div class="text-right space-y-2"> <!-- Tilføjet space mellem kontaktoplysninger -->
         <p>balashaps@gmail.com</p>
         <p>+45 30 49 38 47</p>
       </div>
