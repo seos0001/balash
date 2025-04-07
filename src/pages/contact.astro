@@ -5,11 +5,10 @@ import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 ---
 <MainLayout>
-  <div class="fixed inset-0 flex flex-col justify-between items-center px-6 text-black bg-white min-h-screen">
-    <div class="w-full max-w-3xl flex-grow flex flex-col justify-center">
-
+  <div class="fixed inset-0 flex flex-col justify-between items-start px-6 text-black bg-white min-h-screen">
+    <div class="w-full max-w-3xl flex-grow flex flex-col justify-center ml-32 mt-12">
       <!-- Toptekst -->
-      <div class="mb-8">
+      <div class="mb-15">
         <p class="text-[42px] leading-snug mb-25">
           For any questions or<br />
           inquiries on private events<br />
@@ -18,27 +17,25 @@ import { Image } from 'astro:assets';
       </div>
 
       <!-- Kontaktpersoner -->
-      <div class="mb-8 text-m space-y-2">
+      <div class="mb-10 text-[18px]">
         <p>Emil Dos Santos / chef and service</p>
         <p>Bertram Blauenfeldt Otkjær / wine and service</p>
         <p>Vincent Groos / finance and service</p>
       </div>
 
       <!-- Bund: Mail og telefon -->
-      <div class="flex justify-between text-sm w-full">
-        <a href="mailto:balashaps@gmail.com" class="underline hover:opacity-80">
+      <div class="flex justify-between text-[14px] w-full">
+        <a href="mailto:balashaps@gmail.com" class="underline hover:text-[#1100FF] transition">
           balashaps@gmail.com
         </a>
-        <a href="tel:+4530493847" class="underline hover:opacity-80">
+        <a href="tel:+4530493847" class="underline hover:text-[#1100FF] transition">
           +45 30 49 38 47
         </a>
       </div>
-
     </div>
+
+    <!-- Footer - Ingen manuel styling nødvendig -->
     <Footer />
   </div>
 </MainLayout>
-
-
-
 
