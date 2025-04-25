@@ -22,20 +22,4 @@
 }
 
 @layer utilities {
-  /* Animation til scrolling */
-  @keyframes scrollLoop {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  /* Utility klasse, der bruger animationen */
-  .animate-scroll {
-    animation: scrollLoop 60s linear infinite;
-    display: flex;
-    flex-wrap: nowrap;
-  }
 }

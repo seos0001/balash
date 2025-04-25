@@ -1,16 +1,45 @@
-<div x-data="{ showmenu: false }" class="absolute top-5 w-full px-5 text-sm text-black z-50">
-<header class="flex justify-between items-center relative">
-<!-- Logo -->
-<a href="/" class="font-normal">Balash ( private events, pop-up dining, and catering. ) </a>
+---
+import logo from "../assets/images/logo.png"; 
+---
 
-<!-- Desktop Menu -->
-<nav id="desktopmenu" class="hidden lg:block">
-<ul class="flex flex-row gap-6 font-normal">
-<li><a href="/about" class="hover:text-[#1100FF] transition">about</a></li>
-<li><a href="/contact" class="hover:text-[#1100FF] transition">contact</a></li>
-<li><a href="/archive" class="hover:text-[#1100FF] transition">archive</a></li>
-</ul>
-</nav>
+<div x-data="{ showmenu: false }" class="absolute w-full px-6 text-black z-50 bg-white">
+  <header class="flex justify-between items-center py-4">
+    <!-- Logo til venstre -->
+    <div class="flex items-center justify-start">
+      <a href="/" class="flex items-center">
+        <img src={logo.src} alt="Logo" class="h-10 md:h-16">
+      </a>
+    </div>
+
+    <!-- Mobil Menu Toggle -->
+    <button @click="showmenu = !showmenu" class="lg:hidden p-2 rounded-md hover:bg-gray-100 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Desktop Menu -->
+    <nav id="desktopmenu" class="hidden lg:block">
+      <ul class="flex gap-10 font-semibold text-[12px]">
+        <li><a href="/about" class="hover:text-[#1100FF] transition-colors">Om os</a></li>
+        <li><a href="/archive" class="hover:text-[#1100FF] transition-colors">Arkiv</a></li>
+        <li><a href="/contact" class="hover:text-[#1100FF] transition-colors">Køb</a></li>
+        <li><a href="/contact" class="hover:text-[#1100FF] transition-colors">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobil Menu (Vises kun når showmenu er true) -->
+    <nav x-show="showmenu" x-transition class="lg:hidden absolute top-10 left-0 w-full bg-white">
+      <ul class="flex flex-col gap-8 font-semibold text-lg text-left pl-8 py-6">
+        <li><a href="/about" class="hover:text-[#1100FF] transition-colors">Om os</a></li>
+        <li><a href="/archive" class="hover:text-[#1100FF] transition-colors">Arkiv</a></li>
+        <li><a href="/contact" class="hover:text-[#1100FF] transition-colors">Køb</a></li>
+        <li><a href="/contact" class="hover:text-[#1100FF] transition-colors">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
 
 
 

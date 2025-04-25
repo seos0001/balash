@@ -12,97 +12,47 @@ import ceviche02 from "../assets/images/ceviche02.webp";
 import cabbage01 from "../assets/images/cabbage01.webp";
 import cheesecake from "../assets/images/cheesecake.webp";
 import pavlova from "../assets/images/pavlova.webp";
+
+const galleryImages = [bar, soho01, soho02, soho03, ceviche01, pumpkin, ceviche02, cabbage01, cheesecake, pavlova];
 ---
 
 <MainLayout>
-  <style>
-    /* Sørger for at body ikke kan scrolle */
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
+  <!-- HERO SECTION -->
+  <section class="relative w-full h-[70vh] flex items-center justify-center text-white font-serif overflow-hidden">
+    
+    <!-- Baggrundsbillede -->
+    <img
+      src={soho02.src}
+      alt="Hero Billede"
+      class="absolute inset-0 w-full h-full object-cover z-0"
+    />
 
-    /* Container til galleriet */
-    #scrollContainer {
-      position: fixed;
-      bottom: 20vh;
-      left: 0;
-      width: 100%;
-      height: 550px; /* Øget højden på galleriet */
-      overflow-x: scroll;
-      display: flex;
-      scroll-snap-type: x mandatory;
-      background-color: #fff;
-      z-index: 20;
-    }
+    <div class="relative z-20 text-white text-center px-4 max-w-2xl">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Balash Events</h1>
+      <p class="text-lg md:text-xl">
+        Private dining, curated pop-ups & full-service catering
+      </p>
+    </div>
+  </section>
 
-    /* Billeder i galleriet */
-    #scrollContainer > div {
-      flex-shrink: 0;
-      width: calc(100vw / 2); /* Hver billede tager halvdelen af skærmen */
-      height: 100%;
-    }
-
-    #scrollContainer img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Footeren skal være synlig og ikke blive skjult */
-    footer {
-      position: relative;
-      z-index: 10;
-    }
-  </style>
-
-  <!-- Gallerisektionen, som scroller horisontalt -->
-  <section class="relative w-full">
-    <div 
-      id="scrollContainer" 
-      class="flex snap-x snap-mandatory w-full"
-    >
-      {/* Gør billederne gentagne for at skabe uendelig scroll */}
-      {[...Array(2)].map((_, idx) => (
-        <>
-          {[bar, soho01, soho02, soho03, ceviche01, pumpkin, ceviche02, cabbage01, cheesecake, pavlova].map((img, i) => (
-            <div class="flex-shrink-0 w-[calc(100vw/2)] h-full">
-              <img 
-                src={img.src} 
-                alt={`slide-${i}-${idx}`} 
-                class="object-cover w-full h-full"
-              />
-            </div>
-          ))}
-        </>
+  <!-- HORIZONTAL SCROLLING GALLERY -->
+  <section class="w-full mt-16 overflow-x-auto">
+    <div class="flex gap-4 px-4 md:px-12 pb-6 scroll-smooth snap-x snap-mandatory overflow-x-auto">
+      {galleryImages.map((img, i) => (
+        <div class="flex-shrink-0 w-[80vw] md:w-[40vw] h-[300px] snap-center overflow-hidden" key={i}>
+          <img src={img.src} alt={`gallery-${i}`} class="w-full h-full object-cover" />
+        </div>
       ))}
     </div>
   </section>
 
-  <script>
-    const scrollContainer = document.getElementById('scrollContainer');
 
-    // Scroll-behavior for at tillade horisontal scroll med musens hjul
-    scrollContainer.addEventListener('wheel', (event) => {
-      if (event.deltaY !== 0) {
-        scrollContainer.scrollLeft += event.deltaY * 1.5; // Justér hastighed på scroll
-        event.preventDefault();
-      }
-    });
-
-    // Scroll håndtering for at skabe et uendeligt loop
-    scrollContainer.addEventListener('scroll', () => {
-      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-
-      if (scrollContainer.scrollLeft >= maxScrollLeft) {
-        scrollContainer.scrollLeft = 0; // Går tilbage til starten, når slutningen er nået
-      } else if (scrollContainer.scrollLeft <= 0) {
-        scrollContainer.scrollLeft = maxScrollLeft; // Går til slutningen, når starten er nået
-      }
-    });
-  </script>
+  <section>
+    
+  </section>
 </MainLayout>
+
+
 
 
 

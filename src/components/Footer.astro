@@ -2,12 +2,37 @@
 import Link from "../components/Link.astro";
 ---
 
-<footer class="w-full flex justify-end px-5 text-sm text-black mt-12 mb-4">
-  <p>
-    For any questions or inquiries on private events please 
-    <Link href="/contact" class="font-bold">contact</Link>.
-  </p>
+<footer class="w-full px-5 mt-12 mb-4 text-[8px] text-black">
+  <div class="flex flex-wrap justify-between gap-4 md:gap-8">
+    <!-- Første sektion -->
+    <div class="flex-1">
+      <p>Balash (private events, pop-up dining, and catering.)</p>
+    </div>
+
+    <!-- Instagram link -->
+    <div class="flex-1 text-center md:text-left">
+      <a href="https://www.instagram.com/balashevents" target="_blank" rel="noopener noreferrer" class="hover:text-[#1100FF] transition"> @balashevents </a>
+    </div>
+
+    <!-- E-mail sektion -->
+    <div class="flex-1 text-center md:text-left">
+      <p>balashaps@gmail.com</p>
+    </div>
+
+    <!-- CVR sektion -->
+    <div class="flex-1 text-center md:text-left">
+      <p>CVR: [indsæt CVR-nummer]</p>
+    </div>
+
+    <!-- Copyright sektion -->
+    <div class="flex-1 text-center md:text-right">
+      <p>© 2025 All Rights Reserved</p>
+    </div>
+  </div>
 </footer>
+
+
+
 
 
 

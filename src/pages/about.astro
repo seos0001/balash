@@ -8,9 +8,9 @@ import catering from "../assets/images/catering.webp"
 import dessert from "../assets/images/dessert.webp"
 ---
 <MainLayout>
-  <section class="max-w-4xl mx-auto py-10">
+  <section class="max-w-4xl mx-auto py-10 mt-25">
     <p class="text-lg text-black my-1 tracking-[0.02em] text-left mb-4 mt-10">
-      <span class="text-3xl font-regular">ABOUT</span> 
+      <span class="text-3xl font-regular">OM OS</span> 
     </p>
 
     <div class="grid md:grid-cols-2 gap-12 mb-10">
@@ -29,9 +29,9 @@ import dessert from "../assets/images/dessert.webp"
   <!-- PRIVATE EVENTS -->
   <div>
     <h3 class="text-lg text-black my-1 text-left"> <!-- Venstrejusteret overskrift -->
-      ( PRIVATE EVENTS )
+      PRIVATE EVENTS
     </h3>
-    <hr class="border-t border-gray-300 mt-4 mb-6" /> <!-- Mere afstand omkring linjen -->
+    <hr class="border-t border-black mt-4 mb-6" /> <!-- Mere afstand omkring linjen -->
 
     <!-- Billede til højre og tekst til venstre -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
@@ -48,40 +48,41 @@ import dessert from "../assets/images/dessert.webp"
       </div>
     </div>
 
-    <hr class="border-t border-gray-300 mt-4 mb-6" /> <!-- Mere afstand omkring linjen -->
+    <hr class="border-t border-black mt-4 mb-6" /> <!-- Mere afstand omkring linjen -->
   </div>
 
   <!-- POP UP DINING -->
-  <div>
-    <h3 class="text-lg text-black my-1 text-left"> <!-- Venstrejusteret overskrift -->
-      ( POP UP DINING )
-    </h3>
-    <hr class="border-t border-gray-300 mt-4 mb-6" /> <!-- Mere afstand omkring linjen -->
+<div>
+  <h3 class="text-lg text-black my-1 text-left"> <!-- Venstrejusteret overskrift -->
+    POP UP
+  </h3>
+  <hr class="border-t border-black mt-4 mb-6" /> <!-- Mere afstand omkring linjen -->
 
-    <!-- Billede til højre og tekst til venstre -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
-      <!-- Tekst til venstre -->
-      <div class="pb-2 text-black">
-        <p class="text-left">
-          Our signature concept, where we bring “Balash” to new and exciting locations. With a personal and attentive approach, we make sure every guest feels welcome. We prioritize sustainability by minimizing food waste and working closely with local suppliers. Whether it’s an intimate gathering or a larger event.
-        </p>
-      </div>
-
-      <!-- Billede til højre -->
-      <div>
-        <img src={sonny.src} alt="sonny" class="w-full h-auto object-cover" />
-      </div>
+  <!-- Billede til venstre og tekst til højre -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
+    <!-- Billede -->
+    <div>
+      <img src={sonny.src} alt="sonny" class="w-full h-auto object-cover" />
     </div>
 
-    <hr class="border-t border-gray-300 mt-4 mb-6" /> <!-- Mere afstand omkring linjen -->
+    <!-- Tekst -->
+    <div class="pb-2 text-black flex items-center">
+      <p class="text-left">
+        Our signature concept, where we bring “Balash” to new and exciting locations. With a personal and attentive approach, we make sure every guest feels welcome. We prioritize sustainability by minimizing food waste and working closely with local suppliers. Whether it’s an intimate gathering or a larger event.
+      </p>
+    </div>
   </div>
+
+  <hr class="border-t border-black mt-4 mb-6" /> <!-- Mere afstand omkring linjen -->
+</div>
+
 
   <!-- CATERING -->
   <div>
     <h3 class="text-lg text-black my-1 text-left"> <!-- Venstrejusteret overskrift -->
-      ( CATERING )
+      CATERING
     </h3>
-    <hr class="border-t border-gray-300 mt-4 mb-6" /> <!-- Mere afstand omkring linjen -->
+    <hr class="border-t border-black mt-4 mb-6" /> <!-- Mere afstand omkring linjen -->
 
     <!-- Billede til højre og tekst til venstre -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
@@ -101,7 +102,7 @@ import dessert from "../assets/images/dessert.webp"
       </div>
     </div>
 
-    <hr class="border-t border-gray-300 mt-4 mb-6" /> <!-- Mere afstand omkring linjen -->
+    <hr class="border-t border-black mt-4 mb-6" /> <!-- Mere afstand omkring linjen -->
   </div>
 </div>
 
