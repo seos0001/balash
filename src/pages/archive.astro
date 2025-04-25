@@ -1,87 +1,103 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
-import soho01 from "../assets/images/soho01.webp";
 import soho02 from "../assets/images/soho02.webp";
 import soho03 from "../assets/images/soho03.webp";
 import soho04 from "../assets/images/soho04.webp";
 import soho05 from "../assets/images/soho05.webp";
-import pio01 from "../assets/images/pio01.webp";
-import pio02 from "../assets/images/pio02.webp";
-import pio03 from "../assets/images/pio03.webp";
 import ceviche01 from "../assets/images/ceviche01.webp";
 import ceviche02 from "../assets/images/ceviche02.webp";
 import cabbage01 from "../assets/images/cabbage01.webp";
 import cabbage02 from "../assets/images/cabbage02.webp";
 import bar from "../assets/images/bar.webp";
-import butter from "../assets/images/butter.webp";
-import pavlova from "../assets/images/pavlova.webp";
 import cheesecake from "../assets/images/cheesecake.webp";
 import table from "../assets/images/table.webp";
 import pumpkin from "../assets/images/pumpkin.webp";
 ---
 
+<style>
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
 <MainLayout>
+  <div class="max-w-6xl mx-auto pt-36 px-10 space-y-24">
 
-  <!-- SEKTION 1 -->
-  <div class="max-w-3xl mx-auto pt-36 px-6 space-y-12 mt-20">
-    <img src={soho03.src} alt="soho03" class="w-full h-auto object-cover" />
-
-    <p class="text-black">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore.
-    </p>
-
-    <img src={soho04.src} alt="soho04" class="w-full h-auto object-cover" />
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-      <img src={soho02.src} alt="soho02" class="w-full h-auto object-cover" />
-      <img src={soho05.src} alt="soho05" class="w-full h-auto object-cover" />
+    <!-- Top row -->
+    <div class="grid grid-cols-3 gap-8">
+      <img src={soho03.src} alt="soho03" class="scroll-animate object-cover w-full h-auto" />
+      <img src={soho02.src} alt="soho02" class="scroll-animate object-cover w-full h-auto" />
+      <img src={soho05.src} alt="soho05" class="scroll-animate object-cover w-full h-auto" />
     </div>
-  </div>
 
-  <!-- SEKTION 2 -->
-  <div class="max-w-3xl mx-auto pt-36 px-6 space-y-12">
+    <!-- Full width image -->
+    <img src={soho04.src} alt="table" class="scroll-animate w-full h-auto object-cover" />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
-      <video autoplay muted loop playsinline class="w-full h-[500px] object-cover">
-        <source src="/videos/video01.MP4" type="video/mp4" />
-      </video>
-
-      <p class="text-black pb-2">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget ante mauris. Quisque et tortor a nunc tempor euismod. Nulla facilisi. Integer vehicula nisl eu justo maximus, nec placerat neque viverra.
+    <!-- First text, aligned right -->
+    <div class="grid grid-cols-3 gap-8">
+      <div class="col-span-2"></div>
+      <p class="scroll-animate text-black text-sm leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-      <img src={bar.src} alt="bar" class="w-full h-auto object-cover" />
-      <img src={pumpkin.src} alt="pumpkin" class="w-full h-auto object-cover" />
+    <!-- Middle images -->
+    <div class="grid grid-cols-4 gap-8">
+      <img src={bar.src} alt="bar" class="scroll-animate object-cover w-full h-auto" />
+      <img src={pumpkin.src} alt="pumpkin" class="scroll-animate object-cover w-full h-auto" />
+      <img src={cheesecake.src} alt="cheesecake" class="scroll-animate object-cover w-full h-auto" />
+      <img src={table.src} alt="table" class="scroll-animate object-cover w-full h-auto" />
     </div>
 
-    <img
-      src={cheesecake.src}
-      alt="cheesecake"
-      class="w-full h-[600px] object-cover object-center"
-    />
-  </div>
+    <!-- Second text, aligned left -->
+    <div class="grid grid-cols-3 gap-8">
+      <p class="scroll-animate text-black text-sm leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="col-span-2"></div>
+    </div>
 
-  <!-- SEKTION 3 -->
-  <div class="max-w-3xl mx-auto pt-36 px-6 space-y-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
-      <p class="text-black pb-2">
+    <!-- Two larger images -->
+    <div class="grid grid-cols-2 gap-8">
+      <img src={ceviche01.src} alt="ceviche01" class="scroll-animate object-cover w-full h-auto" />
+      <img src={ceviche02.src} alt="ceviche02" class="scroll-animate object-cover w-full h-auto" />
+    </div>
+
+    <!-- Final text, centered -->
+    <div class="flex justify-center">
+      <p class="scroll-animate text-black text-center text-sm leading-relaxed max-w-md">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore.
       </p>
-
-      <video autoplay muted loop playsinline class="w-full h-[500px] object-cover">
-        <source src="/videos/video02.MP4" type="video/mp4" />
-      </video>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-      <img src={ceviche01.src} alt="ceviche01" class="w-full h-auto object-cover" />
-      <img src={ceviche02.src} alt="ceviche02" class="w-full h-auto object-cover" />
+    <!-- Last two images -->
+    <div class="grid grid-cols-2 gap-8">
+      <img src={cabbage01.src} alt="cabbage01" class="scroll-animate object-cover w-full h-auto" />
+      <img src={cabbage02.src} alt="cabbage02" class="scroll-animate object-cover w-full h-auto" />
     </div>
+
   </div>
 
+  <!-- Scroll animation script -->
+  <script client:load>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+  </script>
 </MainLayout>
+
+
