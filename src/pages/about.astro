@@ -1,90 +1,69 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import { Image } from 'astro:assets';
-import sonny from "../assets/images/sonny.webp"
-import catering from "../assets/images/catering.webp"
-import dessert from "../assets/images/dessert.webp"
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<style>
-  .scroll-animate {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-
-  .scroll-animate.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-</style>
-
 <MainLayout>
-  <section class="max-w-5xl mx-auto pt-40 px-8 md:px-16 space-y-32">
-    
-    <!-- OM BALASH -->
-    <div class="border-t border-black pt-10 grid grid-cols-1 md:grid-cols-2 gap-10 scroll-animate">
-      <!-- Tekstkolonne -->
-      <div class="flex flex-col justify-between h-full text-black">
-        <h2 class="text-2xl mb-4">OM BALASH</h2>
-        <p class="text-sm leading-relaxed mt-auto">
-          Balash er et event- og madkollektiv, der skaber skræddersyede oplevelser for mennesker og brands med noget på hjerte.
-          Vores navn betyder "gratis" på arabisk – men for os handler det om glæden ved at give alt, uden at forvente noget tilbage.
-          Vi laver events, der føles som aftener hos nogen, du kender – bare med kokke, producenter og professionelle bag.
-          Uanset om det er en middag for 12 eller en firmafest for 400, handler det om detaljer, nærvær og mad, der taler sit eget sprog.
-        </p>
-      </div>
+  <!-- Hele siden med sort baggrund og hvid tekst -->
+  <div class="bg-black text-white min-h-screen flex flex-col">
 
-      <!-- Billedekolonne -->
-      <div class="flex">
-        <img src={sonny.src} alt="sonny" class="w-full h-auto object-cover" />
-      </div>
-    </div>
+    <!-- Header: vises tydeligt med hvid tekst -->
+    <header class="z-10 relative">
+      <Header />
+    </header>
 
-    <!-- PRIVATE EVENTS -->
-    <div class="border-t border-black pt-10 grid grid-cols-1 md:grid-cols-2 gap-10 scroll-animate">
-      <div class="flex flex-col justify-between h-full text-black">
-        <h2 class="text-2xl mb-4">PRIVATE EVENTS</h2>
-        <p class="text-sm leading-relaxed mt-auto">
-          Hos Balash skaber vi unikke, personlige arrangementer, hvor maden og atmosfæren smelter sammen. Uanset om det er en fødselsdag, et bryllup eller en middag for dine nærmeste, sørger vi for, at det bliver en oplevelse med varme, nærvær og detaljer, der bliver husket. Vi tager os af alt fra menu, vin og servering til opsætning og oprydning – og vi tilpasser det hele til dig og dine gæster.
-        </p>
-      </div>
-      <div class="flex">
-        <img src={catering.src} alt="catering" class="w-full h-auto object-cover" />
-      </div>
-    </div>
+    <!-- Hovedindhold -->
+    <main class="flex-grow">
+      <section class="max-w-5xl mx-auto pt-40 px-8 md:px-16 space-y-32">
+        <div class="border-t border-white pt-10 grid grid-cols-1 md:grid-cols gap-10 scroll-animate">
+          <!-- Person 1 -->
+          <div class="flex flex-col justify-between h-full max-w-prose mx-auto text-left">
+            <h2 class="text-2xl mb-4">Vincent Groos - Direktør & CFO</h2>
+            <p class="text-sm leading-relaxed mt-auto">
+              Vincent har en baggrund i europæisk business og strategisk ledelse og står for forretningsudvikling og økonomi i Balash. Han brænder for brands, der bygger relationer og for mad som oplevelse. Hans styrke er at tænke i helheder – både for gæsten og for virksomheden.
+            </p>
+          </div>
 
-    <!-- POP UP DINING -->
-    <div class="border-t border-black pt-10 grid grid-cols-1 md:grid-cols-2 gap-10 scroll-animate">
-      <div class="flex flex-col justify-between h-full text-black">
-        <h2 class="text-2xl mb-4">POP UP DINING</h2>
-        <p class="text-sm leading-relaxed mt-auto">
-          Balash pop-ups er vores legeplads. Midlertidige madoplevelser i skæve lokaler, baggårde eller vinbarer, hvor vi inviterer jer ind i vores univers. Her eksperimenterer vi med smage, sæsoner og stemninger, og skaber aftener, hvor gæsterne bliver en del af fortællingen. Pop-up dining er både testkøkken, fest og fællesskab – og en mulighed for at opleve Balash uden at booke et event.
-        </p>
-      </div>
-      <div class="flex">
-        <img src={sonny.src} alt="popup" class="w-full h-auto object-cover" />
-      </div>
-    </div>
+          <!-- Person 2 -->
+          <div class="flex flex-col justify-between h-full max-w-prose mx-auto text-left">
+            <h2 class="text-2xl mb-4">Emil Dos Santos Andersen - Køkkenchef & Kreatør</h2>
+            <p class="text-sm leading-relaxed mt-auto">
+              Emil er Balashs autodidakte kok og kreative kraft. Han har arbejdet på nogle af Københavns mest kompromisløse restauranter, og i dag leder han køkkenet med kompromisløshed og fantasi. Emil bygger retter op som fortællinger – og han ved præcis, hvordan mad skal smage, føles og se ud.
+            </p>
+          </div>
 
-    <!-- CATERING -->
-    <div class="border-t border-black pt-10 grid grid-cols-1 md:grid-cols-2 gap-10 scroll-animate">
-      <div class="flex flex-col justify-between h-full text-black">
-        <h2 class="text-2xl mb-4">CATERING</h2>
-        <p class="text-sm leading-relaxed mt-auto">
-         Vi laver catering med samme tilgang, som vi laver events: fra bunden, med respekt for råvaren og med fokus på det menneskelige møde. Vi leverer til både virksomheder, produktioner og private, og vi skræddersyr menuerne, så de passer til alt fra frokostmøder og produktlanceringer til gallamiddage og receptioner. Vores køkken er baseret på no-waste, sæsonens råvarer og smag, der sidder fast i hukommelsen.
-        </p>
-      </div>
-      <div class="flex">
-        <img src={dessert.src} alt="dessert" class="w-full h-auto object-cover" />
-      </div>
-    </div>
+          <!-- Person 3 -->
+          <div class="flex flex-col justify-between h-full max-w-prose mx-auto text-left">
+            <h2 class="text-2xl mb-4">Bertram Blauenfeldt Otkjær - Vinkoordinator & Eventleder</h2>
+            <p class="text-sm leading-relaxed mt-auto">
+              Bertram er vores vinmand og detaljeorienterede tovholder. Han har serveret vin og skabt stemning i fem år som bestyrer på Pio Vinbar. I Balash binder han det hele sammen mellem køkken, klient og koncept – med en sikker hånd og altid med sans for, hvad gæsten har brug for, før de selv ved det.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-        <div class="border-t border-black pt-10 grid grid-cols-1 md:grid-cols-2 gap-10 scroll-animate">
-      <div class="flex flex-col justify-between h-full text-black">
-    </div>
+     <!-- Footer med hvid tekst -->
+     <footer class="z-10 relative text-white">
+      <Footer />
+    </footer>
+  </div>
+  </div>
 
-  </section>
+  <!-- Scroll animation styles -->
+  <style>
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .scroll-animate.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 
   <!-- Scroll animation script -->
   <script client:load>
@@ -99,5 +78,4 @@ import dessert from "../assets/images/dessert.webp"
     document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
   </script>
 </MainLayout>
-
 

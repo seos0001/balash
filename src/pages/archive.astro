@@ -1,5 +1,8 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
 import { Image } from 'astro:assets';
 import soho02 from "../assets/images/soho02.webp";
 import soho03 from "../assets/images/soho03.webp";
@@ -29,7 +32,15 @@ import pumpkin from "../assets/images/pumpkin.webp";
 </style>
 
 <MainLayout>
+  <div class="bg-[#C6C6C6] min-h-screen flex flex-col justify-between text-black">
+
+         <!-- Header -->
+         <header class="z-20 relative">
+          <Header />
+        </header>
+
   <div class="max-w-6xl mx-auto pt-36 px-10 space-y-24">
+
 
     <!-- Top row -->
     <div class="grid grid-cols-3 gap-8">
@@ -84,6 +95,7 @@ import pumpkin from "../assets/images/pumpkin.webp";
       <img src={cabbage02.src} alt="cabbage02" class="scroll-animate object-cover w-full h-auto" />
     </div>
 
+
   </div>
 
   <!-- Scroll animation script -->
@@ -98,6 +110,11 @@ import pumpkin from "../assets/images/pumpkin.webp";
 
     document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
   </script>
+
+      <!-- Footer -->
+      <footer class="z-20 relative">
+        <Footer />
+      </footer>
 </MainLayout>
 
 

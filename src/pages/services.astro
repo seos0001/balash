@@ -1,56 +1,60 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <MainLayout>
-  <style>
-    body {
-      overflow: hidden;
-    }
-  </style>
+  <!-- Wrapper med sort baggrund og hvid tekst -->
+  <div class="bg-black text-white min-h-screen flex flex-col">
 
-  <div 
-    class="bg-black text-white h-screen w-full grid grid-cols-3 gap-x-10"
-    style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500;"
-  >
-    <!-- Venstre kolonne (2/3) -->
-    <div class="col-span-2 px-10 py-12 overflow-y-auto h-screen text-[1.875rem] md:text-[2rem] leading-none tracking-wide">
-      <p>
-        Balash er et event- og madkollektiv, der skaber skræddersyede oplevelser for mennesker og brands med noget på hjerte. 
-        <br />
-        Vores navn betyder “gratis” på arabisk – men for os handler det om glæden ved at give alt, uden at forvente noget tilbage. Vi laver events, der føles som aftener hos nogen, du kender – bare med kokke, producenter og professionelle bag. Uanset om det er en middag for 12 eller en firmafest for 400, handler det om detaljer, nærvær og mad, der taler sit eget sprog.
-      </p>
+    <!-- Header med hvid tekst -->
+    <header class="z-20 relative text-white">
+      <Header />
+    </header>
+
+    <!-- Indhold i grid -->
+    <div
+      class="flex-grow w-full grid grid-cols-3 gap-x-10 px-10 py-12"
+      style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500;"
+    >
+      <!-- Venstre kolonne (2/3) -->
+      <div class="col-span-2 overflow-y-auto text-[1.875rem] md:text-[2rem] leading-none tracking-wide">
+        <p>
+          Balash er et event- og madkollektiv, der skaber skræddersyede oplevelser for mennesker og brands med noget på hjerte. 
+          <br />
+          Vores navn betyder “gratis” på arabisk – men for os handler det om glæden ved at give alt, uden at forvente noget tilbage. Vi laver events, der føles som aftener hos nogen, du kender – bare med kokke, producenter og professionelle bag. Uanset om det er en middag for 12 eller en firmafest for 400, handler det om detaljer, nærvær og mad, der taler sit eget sprog.
+        </p>
+      </div>
+
+      <!-- Højre kolonne (1/3) -->
+      <div class="overflow-y-auto text-[1.125rem] leading-tight space-y-6">
+        <section>
+          <h2 class="mb-7 text-[1.5rem]">Private events</h2>
+          <p>
+            Hos Balash skaber vi unikke, personlige arrangementer, hvor maden og atmosfæren smelter sammen. Uanset om det er en fødselsdag, et bryllup eller en middag for dine nærmeste, sørger vi for, at det bliver en oplevelse med varme, nærvær og detaljer, der bliver husket. Vi tager os af alt fra menu, vin og servering til opsætning og oprydning – og vi tilpasser det hele til dig og dine gæster.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-7 text-[1.5rem]">Pop-up dining</h2>
+          <p>
+            Balash pop-ups er vores legeplads. Midlertidige madoplevelser i skæve lokaler, baggårde eller vinbarer, hvor vi inviterer jer ind i vores univers. Her eksperimenterer vi med smage, sæsoner og stemninger, og skaber aftener, hvor gæsterne bliver en del af fortællingen. Pop-up dining er både testkøkken, fest og fællesskab – og en mulighed for at opleve Balash uden at booke et event.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-7 text-[1.5rem]">Catering</h2>
+          <p>
+            Vi laver catering med samme tilgang, som vi laver events: fra bunden, med respekt for råvaren og med fokus på det menneskelige møde. Vi leverer til både virksomheder, produktioner og private, og vi skræddersyr menuerne, så de passer til alt fra frokostmøder og produktlanceringer til gallamiddage og receptioner. Vores køkken er baseret på no-waste, sæsonens råvarer og smag, der sidder fast i hukommelsen.
+          </p>
+        </section>
+      </div>
     </div>
 
-    <!-- Højre kolonne (1/3) -->
-        <div class="px-10 py-12 overflow-y-auto h-screen text-[1.125rem] leading-tight space-y-6">
-
-            <section>
-              <h2 class="mb-7 text-[1.5rem]">Private events</h2>
-              <p>
-                Hos Balash skaber vi unikke, personlige arrangementer, hvor maden og atmosfæren smelter sammen. Uanset om det er en fødselsdag, et bryllup eller en middag for dine nærmeste, sørger vi for, at det bliver en oplevelse med varme, nærvær og detaljer, der bliver husket. Vi tager os af alt fra menu, vin og servering til opsætning og oprydning – og vi tilpasser det hele til dig og dine gæster.
-              </p>
-            </section>
-      
-            <section>
-              <h2 class="mb-7 text-[1.5rem]">Pop-up dining</h2>
-              <p>
-                Balash pop-ups er vores legeplads. Midlertidige madoplevelser i skæve lokaler, baggårde eller vinbarer, hvor vi inviterer jer ind i vores univers. Her eksperimenterer vi med smage, sæsoner og stemninger, og skaber aftener, hvor gæsterne bliver en del af fortællingen. Pop-up dining er både testkøkken, fest og fællesskab – og en mulighed for at opleve Balash uden at booke et event.
-              </p>
-            </section>
-      
-            <section>
-              <h2 class="mb-7 text-[1.5rem]">Catering</h2>
-              <p>
-                Vi laver catering med samme tilgang, som vi laver events: fra bunden, med respekt for råvaren og med fokus på det menneskelige møde. Vi leverer til både virksomheder, produktioner og private, og vi skræddersyr menuerne, så de passer til alt fra frokostmøder og produktlanceringer til gallamiddage og receptioner. Vores køkken er baseret på no-waste, sæsonens råvarer og smag, der sidder fast i hukommelsen.
-              </p>
-            </section>
-          </div>
-    </div>
+    <!-- Footer med hvid tekst -->
+    <footer class="z-20 relative text-white mt-auto">
+      <Footer />
+    </footer>
   </div>
 </MainLayout>
-
-
-
-  
-
