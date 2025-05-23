@@ -17,40 +17,22 @@ const galleryImages = [bar, soho01, soho02, soho03, ceviche01, pumpkin, ceviche0
 ---
 
 <MainLayout>
-  <!-- HERO SECTION -->
-  <section class="relative w-full h-[70vh] flex items-center justify-center text-white font-serif overflow-hidden">
-    
-    <!-- Baggrundsbillede -->
-    <img
-      src={soho02.src}
-      alt="Hero Billede"
-      class="absolute inset-0 w-full h-full object-cover z-0"
-    />
+  <div class="bg-[#97977c] min-h-screen">
 
-    <div class="relative z-20 text-white text-center px-4 max-w-2xl">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Balash Events</h1>
-      <p class="text-lg md:text-xl">
-        Private dining, curated pop-ups & full-service catering
-      </p>
-    </div>
-  </section>
-
-  <!-- HORIZONTAL SCROLLING GALLERY -->
-  <section class="w-full mt-16 overflow-x-auto">
-    <div class="flex gap-4 px-4 md:px-12 pb-6 scroll-smooth snap-x snap-mandatory overflow-x-auto">
-      {galleryImages.map((img, i) => (
-        <div class="flex-shrink-0 w-[80vw] md:w-[40vw] h-[300px] snap-center overflow-hidden" key={i}>
-          <img src={img.src} alt={`gallery-${i}`} class="w-full h-full object-cover" />
-        </div>
-      ))}
-    </div>
-  </section>
-
-
-  <section>
-    
-  </section>
+    <!-- HORIZONTAL SCROLLING GALLERY -->
+    <section class="w-full mt-16 overflow-x-auto">
+      <div class="flex gap-4 px-4 md:px-12 pb-6 scroll-smooth snap-x snap-mandatory overflow-x-auto">
+        {galleryImages.map((img, i) => (
+          <div class="flex-shrink-0 w-[80vw] md:w-[40vw] h-[300px] snap-center overflow-hidden" key={i}>
+            <img src={img.src} alt={`gallery-${i}`} class="w-full h-full object-cover" />
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
 </MainLayout>
+
+
 
 
 
